@@ -1,12 +1,6 @@
-@mixin li($color) {
-  width: 40px;
-  height: 40px;
+@mixin box($color, $width, $height, $border: none) {
+  width: $width;
+  height: $height;
   background-color: $color;
-}
-
-@mixin button($color) {
-  width: 140px;
-  height: 40px;
-  background-color: $color;
-  border: solid 5px #fff;
+  border: $border;
 }

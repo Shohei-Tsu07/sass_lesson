@@ -2,7 +2,7 @@
 @use 'mixin';
 
 .header{
-  max-width: var.$maxWith;
+  max-width: var.$maxWidth;
   height: 100px;
   background-color: var.$navy;
   position: relative;
@@ -23,7 +23,7 @@
       $color : nth(var.$buttonColor, $index_key);
       
       & > .#{$className} {        // &(ul) > .(ulの中のliのclass名)
-        @include mixin.li($color);
+          @include mixin.box($color, 40px, 40px);
       }
     }
   }
@@ -31,7 +31,7 @@
 
 main{
   display: flex;
-  max-width: var.$maxWith;
+  max-width: var.$maxWidth;
 
   & > .sidebar{
     width: 150px;
@@ -59,7 +59,7 @@ main{
         $color : nth(var.$buttonColor, $index_key);
 
         & > .#{$className}{
-          @include mixin.button($color);
+            @include mixin.box($color, 140px, 40px, solid 5px #fff);
         }
       }
     }
@@ -67,7 +67,7 @@ main{
 }
 
 .footer{
-  max-width: var.$maxWith;
+  max-width: var.$maxWidth;
   height: 100px;
   background-color: var.$brown;
 }
