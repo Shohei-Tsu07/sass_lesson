@@ -1,7 +1,7 @@
 @use 'variable' as var;
 @use 'mixin';
 
-.header{
+.header {
   max-width: var.$maxWidth;
   height: 100px;
   background-color: var.$navy;
@@ -29,7 +29,7 @@
   }
 }
 
-main{
+main {
   display: flex;
   max-width: var.$maxWidth;
 
@@ -39,13 +39,13 @@ main{
     background-color: var.$green;
   }
 
-  & > .main{
+  & > .main {
   width: 250px;
   height: 250px;
   background-color: var.$red;
   position: relative;
 
-    & > .container{
+    & > .container {
       width: 150px;
       display: flex;
       flex-direction: column;
@@ -66,7 +66,7 @@ main{
   }
 }
 
-.footer{
+.footer {
   max-width: var.$maxWidth;
   height: 100px;
   background-color: var.$brown;
